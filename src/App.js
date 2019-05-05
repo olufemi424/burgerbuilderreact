@@ -1,9 +1,14 @@
 import React from "react";
 
+import Layout from "./components/Layout/Layout";
+import BurderBulder from "./containers/BurgerBuilder/BurgerBuilder";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
+    <div>
+      <Layout>
+        <BurderBulder />
+      </Layout>
     </div>
   );
 }

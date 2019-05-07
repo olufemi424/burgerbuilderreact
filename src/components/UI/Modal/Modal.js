@@ -9,7 +9,8 @@ const Modal = props => (
     <div
       style={{
         transform: props.show ? "translateY(0)" : "translateY(-100%)",
-        opacity: props.show ? "1" : 0
+        opacity: props.show ? "1" : 0,
+        pointerEvents: props.show ? null : "none"
       }}
       className={classes.Modal}
     >

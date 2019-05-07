@@ -8,6 +8,8 @@ import Aux from "../../../hoc/Aux";
 const SideDrawer = props => {
   let attaachedClasses = [classes.SideDrawer, classes.Close];
   if (props.open) attaachedClasses = [classes.SideDrawer, classes.Open];
+
+  console.log(props);
   return (
     <Aux>
       <Backdrop show={props.open} clicked={props.closed} />
@@ -16,7 +18,7 @@ const SideDrawer = props => {
           <Logo>Logo</Logo>
         </div>
         <nav>
-          <NavigationItems>Item 1</NavigationItems>
+          <NavigationItems />
         </nav>
       </div>
     </Aux>

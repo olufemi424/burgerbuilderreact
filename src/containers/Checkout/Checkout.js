@@ -20,7 +20,6 @@ export class Checkout extends Component {
         ingredients[param[0]] = +param[1];
       }
     }
-
     this.setState({ ingredients: ingredients, totalPrice: price });
   }
 
@@ -42,10 +41,11 @@ export class Checkout extends Component {
         />
         <Route
           path={this.props.match.path + "/contact-data"}
-          render={() => (
+          render={props => (
             <ContactData
               ingredients={this.state.ingredients}
               price={this.state.totalPrice}
+              {...props}
             />
           )}
         />
